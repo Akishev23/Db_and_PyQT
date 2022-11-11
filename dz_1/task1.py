@@ -89,6 +89,8 @@ class HostRange:
         provides with result in appropriate view
         :return:
         """
+        self.clarify()
+        self.thead_dividing()
         print(tabulate(self._info, headers=['host', 'ip', 'result']))
 
 
@@ -108,6 +110,4 @@ if __name__ == '__main__':
             '19.252.78.168'
         ]
     )
-    hosts.clarify()
-    hosts.thead_dividing()
     hosts.print_info()
