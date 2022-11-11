@@ -45,8 +45,9 @@ class HostRange:
                 self._info.append([host, ipaddress.ip_address(host)])
             except ValueError:
                 not_an_ip.append(host)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=len(not_an_ip)) as executor:
-            executor.map(self.adding_ip_to_hosts, not_an_ip)
+        if len(not_an_ip):
+            with concurrent.futures.ThreadPoolExecutor(max_workers=len(not_an_ip)) as executor:
+                executor.map(self.adding_ip_to_hosts, not_an_ip)
 
     def gel_el_index(self, element):
         """
@@ -84,7 +85,7 @@ class HostRange:
         with concurrent.futures.ThreadPoolExecutor(max_workers=len(sublist_of_real_ip)) as executor:
             executor.map(self.pinger, sublist_of_real_ip)
 
-    def print_info(self):
+    def host_ping(self):
         """
         provides with result in appropriate view
         :return:
@@ -110,4 +111,4 @@ if __name__ == '__main__':
             '19.252.78.168'
         ]
     )
-    hosts.print_info()
+    hosts.host_ping()
