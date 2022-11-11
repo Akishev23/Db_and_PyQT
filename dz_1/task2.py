@@ -5,6 +5,7 @@
 """
 from ipaddress import ip_address
 from task1 import HostRange
+from tabulate import tabulate
 
 
 def host_range_ping(s_host: str, desired_range: int):
@@ -16,7 +17,9 @@ def host_range_ping(s_host: str, desired_range: int):
     """
     list_of_hosts = [str(ip_address(s_host) + j) for j in range(desired_range)]
     hosts = HostRange(list_of_hosts)
-    hosts.host_ping()
+    hosts.clarify()
+    hosts.thead_dividing()
+    print(tabulate(hosts.info, headers=['host', 'ip', 'result']))
 
 
 if __name__ == '__main__':
