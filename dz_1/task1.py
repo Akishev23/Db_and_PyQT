@@ -10,9 +10,7 @@ import platform
 import ipaddress
 import socket
 import concurrent.futures
-import time
 from tabulate import tabulate
-from tqdm import tqdm
 
 
 class HostRange:
@@ -69,8 +67,6 @@ class HostRange:
         sublist_of_real_ip = [str(k[1]) for k in self._info]
         with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
             executor.map(self.pinger, sublist_of_real_ip)
-        for _ in tqdm(sublist_of_real_ip):
-            time.sleep(0.1)
 
     def print_info(self):
         """
