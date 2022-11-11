@@ -42,8 +42,7 @@ class HostRange:
         """
         for index, value in enumerate(self._info):
             if str(value[1]) == element:
-                ind = index
-            return ind
+                return index
 
     def pinger(self, ip_str: str):
         """
@@ -70,7 +69,7 @@ class HostRange:
         sublist_of_real_ip = [str(k[1]) for k in self._info]
         with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
             executor.map(self.pinger, sublist_of_real_ip)
-        for _ in tqdm(self._info):
+        for _ in tqdm(sublist_of_real_ip):
             time.sleep(0.1)
 
     def print_info(self):
