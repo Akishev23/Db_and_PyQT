@@ -1,8 +1,14 @@
+"""
+useful classes, functions and variables are placed here
+"""
+
 import subprocess
 import platform
 import ipaddress
 import socket
 import concurrent.futures
+from time import sleep
+from tqdm import tqdm
 
 
 class HostRange:
@@ -86,4 +92,14 @@ class HostRange:
         :return:
         """
         return self._info
+
+
+def progress_bar(list_of_hosts: list):
+    """
+    shows progress bar of task performing
+    :param list_of_hosts: list
+    :return:
+    """
+    for _ in tqdm(list_of_hosts):
+        sleep(0.1)
 

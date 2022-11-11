@@ -4,9 +4,9 @@
 проверять их доступность с выводом соответствующего сообщения («Узел доступен»,
 «Узел недоступен»). При этом ip-адрес сетевого узла должен создаваться с помощью функции
 ip_address(). """
-
-from hostrange import HostRange
+from threading import Thread
 from tabulate import tabulate
+from useful import HostRange, progress_bar
 
 
 def host_ping(list_of_hosts: list) -> list:
@@ -17,6 +17,8 @@ def host_ping(list_of_hosts: list) -> list:
     """
     hosts = HostRange(list_of_hosts)
     hosts.clarify()
+    thread = Thread(target=progress_bar, args=(list_of_hosts,), daemon=True)
+    thread.start()
     hosts.thead_dividing()
     print(tabulate(hosts.info, headers=['host', 'ip', 'result']))
 
@@ -36,4 +38,3 @@ if __name__ == '__main__':
         '19.252.78.168'
     ]
     host_ping(l_hosts)
-

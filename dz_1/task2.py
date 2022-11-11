@@ -3,23 +3,30 @@
 должен только последний октет каждого адреса. По результатам проверки должно выводиться
 соответствующее сообщение.
 """
+from threading import Thread
 from ipaddress import ip_address
-from task1 import HostRange
+from useful import HostRange, progress_bar
 from tabulate import tabulate
 
 
-def host_range_ping(s_host: str, desired_range: int):
+def host_range_ping(s_host: str, desired_range: int, print_result=True):
     """
     takes a starting host and desired range of ones and prints info regarding their availability
     :param s_host: string
     :param desired_range: int
+    :param print_result:bool, print or return result
     :return:
     """
     list_of_hosts = [str(ip_address(s_host) + j) for j in range(desired_range)]
     hosts = HostRange(list_of_hosts)
     hosts.clarify()
+    thread = Thread(target=progress_bar, args=(list_of_hosts,), daemon=True)
+    thread.start()
     hosts.thead_dividing()
-    print(tabulate(hosts.info, headers=['host', 'ip', 'result']))
+    if print_result:
+        print(tabulate(hosts.info, headers=['host', 'ip', 'result']))
+    else:
+        return hosts.info
 
 
 if __name__ == '__main__':
