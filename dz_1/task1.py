@@ -22,15 +22,31 @@ class HostRange:
         self.list_of_hosts = all_hosts
         self._info = []
 
+    def adding_ip_to_hosts(self, current_host: str):
+        """
+        haldles non-ip hosts
+        :param current_host: string
+        :return:
+        """
+        try:
+            real_ip = socket.gethostbyname(current_host)
+            self._info.append([current_host, real_ip])
+        except socket.gaierror:
+            print(f'Unknown host {current_host}, removing from host range...')
+
+    def clarify(self):
+        """
+        builds a list of hosts and real_ip
+        :return:
+        """
+        not_an_ip = []
         for host in self.list_of_hosts:
             try:
                 self._info.append([host, ipaddress.ip_address(host)])
             except ValueError:
-                try:
-                    precise_ip = socket.gethostbyname(host)
-                    self._info.append([host, ipaddress.ip_address(precise_ip)])
-                except socket.gaierror:
-                    print(f'Unknown host {host}, removing from host range...')
+                not_an_ip.append(host)
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(not_an_ip)) as executor:
+            executor.map(self.adding_ip_to_hosts, not_an_ip)
 
     def gel_el_index(self, element):
         """
@@ -65,7 +81,7 @@ class HostRange:
         :return:
         """
         sublist_of_real_ip = [str(k[1]) for k in self._info]
-        with concurrent.futures.ThreadPoolExecutor(max_workers=20) as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=len(sublist_of_real_ip)) as executor:
             executor.map(self.pinger, sublist_of_real_ip)
 
     def print_info(self):
@@ -92,5 +108,6 @@ if __name__ == '__main__':
             '19.252.78.168'
         ]
     )
+    hosts.clarify()
     hosts.thead_dividing()
     hosts.print_info()
