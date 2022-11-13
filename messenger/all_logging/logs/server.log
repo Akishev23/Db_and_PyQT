@@ -1,0 +1,682 @@
+2022-11-13 03:39:52,655 - server - common_logging:main:19 - rest warning
+2022-11-13 03:39:52,661 - server - common_logging:main:20 - test debug
+2022-11-13 03:39:52,661 - server - common_logging:main:21 - test error
+2022-11-13 03:40:00,402 - server - common_logging:main:19 - rest warning
+2022-11-13 03:40:00,402 - server - common_logging:main:20 - test debug
+2022-11-13 03:40:00,402 - server - common_logging:main:21 - test error
+2022-11-13 03:40:06,020 - server - common_logging:main:19 - rest warning
+2022-11-13 03:40:06,021 - server - common_logging:main:20 - test debug
+2022-11-13 03:40:06,021 - server - common_logging:main:21 - test error
+2022-11-13 04:09:47,148 - server - common_logging:main:19 - rest warning
+2022-11-13 04:09:47,148 - server - common_logging:main:20 - test debug
+2022-11-13 04:09:47,153 - server - common_logging:main:21 - test error
+2022-11-13 04:16:27,078 - server - common_logging:main:19 - rest warning
+2022-11-13 04:16:27,079 - server - common_logging:main:20 - test debug
+2022-11-13 04:16:27,079 - server - common_logging:main:21 - test error
+2022-11-13 04:24:41,751 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:24:41,752 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:24:41,752 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:24:52,558 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:24:52,561 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:24:52,564 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:25:08,869 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:25:08,873 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:25:08,878 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:25:08,878 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 04:30:57,053 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:30:57,055 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:30:57,055 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:30:57,056 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 04:31:34,861 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:31:34,862 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:31:34,864 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:31:34,867 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 04:33:06,462 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:33:06,467 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:33:06,469 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:33:06,480 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 04:34:06,505 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:34:06,506 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:34:06,506 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:34:06,507 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 04:35:56,619 - server - server:accept_client:101 - Client with address ('127.0.0.1', 52972) connected
+2022-11-13 04:35:56,623 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x0000022754D4AC20>, <socket.socket fd=604, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,623 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 52972)
+2022-11-13 04:35:56,623 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668303356.6195347, 'sender': 'test2'}
+2022-11-13 04:35:56,626 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,626 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668303356.6195347, 'sender': 'test2'}
+2022-11-13 04:35:56,626 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 04:35:56,626 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 04:35:56,629 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:35:56,630 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 04:35:56,633 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 04:35:56,636 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'presence', 'time': 1668303356.6195347, 'sender': 'test2'}, [], <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,636 - server - server:accept_client:101 - Client with address ('127.0.0.1', 52973) connected
+2022-11-13 04:35:56,639 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x0000022754D4AC20>, <socket.socket fd=604, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,640 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 52973)
+2022-11-13 04:35:56,640 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668303356.625041, 'sender': 'test1'}
+2022-11-13 04:35:56,643 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,644 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668303356.625041, 'sender': 'test1'}
+2022-11-13 04:35:56,644 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 04:35:56,644 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 04:35:56,648 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:35:56,648 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 04:35:56,652 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 04:35:56,654 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'presence', 'time': 1668303356.625041, 'sender': 'test1'}, [], <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,654 - server - server:accept_client:101 - Client with address ('127.0.0.1', 52974) connected
+2022-11-13 04:35:56,665 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x0000022754D4AC20>, <socket.socket fd=604, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,665 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 52974)
+2022-11-13 04:35:56,665 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668303356.6350858, 'sender': 'test3'}
+2022-11-13 04:35:56,670 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:35:56,670 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668303356.6350858, 'sender': 'test3'}
+2022-11-13 04:35:56,671 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 04:35:56,671 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 04:35:56,675 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:35:56,676 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 04:35:56,679 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 04:35:56,683 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'presence', 'time': 1668303356.6350858, 'sender': 'test3'}, [], <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:36:30,264 - server - functions:listen_and_get:31 - got message from sender @test3@ hellow
+2022-11-13 04:36:30,265 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:36:30,267 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'}
+2022-11-13 04:36:30,269 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'}, [{'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'}], <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:36:30,269 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'}
+2022-11-13 04:36:30,273 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:36:30,273 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test3", "receiver": "test1", "time": 1668303390.083063, "message_text": "hellow"}' has been successfully sent
+2022-11-13 04:36:30,275 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, {'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 04:36:30,275 - server - server:send_message_to_receiver:86 - Sent message to test1 from user test3
+2022-11-13 04:36:30,278 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test3', 'receiver': 'test1', 'time': 1668303390.083063, 'message_text': 'hellow'}, {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:36:54,221 - server - functions:listen_and_get:31 - got message from sender @test1@ and you
+2022-11-13 04:36:54,223 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:36:54,224 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'}
+2022-11-13 04:36:54,226 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'}, [{'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'}], <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:36:54,227 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'}
+2022-11-13 04:36:54,230 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:36:54,230 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test1", "receiver": "test2", "time": 1668303414.1485612, "message_text": "and you"}' has been successfully sent
+2022-11-13 04:36:54,233 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 04:36:54,233 - server - server:send_message_to_receiver:86 - Sent message to test2 from user test1
+2022-11-13 04:36:54,235 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668303414.1485612, 'message_text': 'and you'}, {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:08,235 - server - functions:listen_and_get:31 - got message from sender @test2@ he
+2022-11-13 04:37:08,237 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:08,238 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'}
+2022-11-13 04:37:08,240 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'}, [{'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'}], <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:08,241 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'}
+2022-11-13 04:37:08,244 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:37:08,244 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test2", "receiver": "test1", "time": 1668303428.1142147, "message_text": "he"}' has been successfully sent
+2022-11-13 04:37:08,247 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 04:37:08,247 - server - server:send_message_to_receiver:86 - Sent message to test1 from user test2
+2022-11-13 04:37:08,250 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668303428.1142147, 'message_text': 'he'}, {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:25,606 - server - functions:listen_and_get:31 - got message from sender @test2@ hp
+2022-11-13 04:37:25,609 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:25,609 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'}
+2022-11-13 04:37:25,612 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'}, [{'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'}], <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:25,612 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'}
+2022-11-13 04:37:25,614 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:37:25,615 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test2", "receiver": "test3", "time": 1668303445.413991, "message_text": "hp"}' has been successfully sent
+2022-11-13 04:37:25,618 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>, {'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 04:37:25,618 - server - server:send_message_to_receiver:86 - Sent message to test3 from user test2
+2022-11-13 04:37:25,620 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'message', 'sender': 'test2', 'receiver': 'test3', 'time': 1668303445.413991, 'message_text': 'hp'}, {'test2': <socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, 'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}, [<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>, <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:34,101 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'exit', 'time': 1668303453.9178925, 'sender': 'test2'}
+2022-11-13 04:37:34,103 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=460, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52972)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:34,107 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'exit', 'time': 1668303453.9178925, 'sender': 'test2'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test1': <socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>, 'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:41,527 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'exit', 'time': 1668303461.4762378, 'sender': 'test1'}
+2022-11-13 04:37:41,530 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=644, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52973)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:41,533 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'exit', 'time': 1668303461.4762378, 'sender': 'test1'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [<socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>], {'test3': <socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:44,922 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'exit', 'time': 1668303464.792074, 'sender': 'test3'}
+2022-11-13 04:37:44,925 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=808, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 52974)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:37:44,926 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'exit', 'time': 1668303464.792074, 'sender': 'test3'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:39:45,514 - server - server:accept_client:101 - Client with address ('127.0.0.1', 53019) connected
+2022-11-13 04:39:45,517 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x0000022754D4AC20>, <socket.socket fd=604, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:39:45,517 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 53019)
+2022-11-13 04:39:45,517 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668303585.5148814, 'sender': 'guest'}
+2022-11-13 04:39:45,520 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=580, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53019)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:39:45,520 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668303585.5148814, 'sender': 'guest'}
+2022-11-13 04:39:45,521 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 04:39:45,521 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 04:39:45,523 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 04:39:45,524 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 04:39:45,526 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=580, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53019)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 04:39:45,529 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x0000022754D4AC20>, {'action': 'presence', 'time': 1668303585.5148814, 'sender': 'guest'}, [], <socket.socket fd=580, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53019)>, [<socket.socket fd=580, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53019)>], {'guest': <socket.socket fd=580, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53019)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 04:40:24,089 - server - server:main_server:144 - Connection with ('127.0.0.1', 53019) has been lost
+2022-11-13 04:43:28,431 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:43:28,434 - server - functions:args_parser:94 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:43:28,437 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:43:28,437 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 04:53:10,503 - server - functions:args_parser:81 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:53:10,504 - server - functions:args_parser:93 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 04:53:10,506 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 04:53:10,507 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 05:00:49,408 - server - server:accept_client:101 - Client with address ('127.0.0.1', 53257) connected
+2022-11-13 05:00:49,410 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x000002442556B040>, <socket.socket fd=816, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:00:49,410 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 53257)
+2022-11-13 05:00:49,613 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668304849.4082606, 'sender': 'guest'}
+2022-11-13 05:00:49,615 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:00:49,616 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668304849.4082606, 'sender': 'guest'}
+2022-11-13 05:00:49,616 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 05:00:49,616 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 05:00:49,619 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 05:00:49,619 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 05:00:49,622 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 05:00:49,626 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000002442556B040>, {'action': 'presence', 'time': 1668304849.4082606, 'sender': 'guest'}, [], <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>, [<socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>], {'guest': <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:02,965 - server - functions:listen_and_get:31 - got message from sender @guest@ ddjsjs
+2022-11-13 05:01:02,972 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:02,972 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'guest', 'receiver': 'me', 'time': 1668304862.8550158, 'message_text': 'ddjsjs'}
+2022-11-13 05:01:02,975 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000002442556B040>, {'action': 'message', 'sender': 'guest', 'receiver': 'me', 'time': 1668304862.8550158, 'message_text': 'ddjsjs'}, [{'action': 'message', 'sender': 'guest', 'receiver': 'me', 'time': 1668304862.8550158, 'message_text': 'ddjsjs'}], <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>, [<socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>], {'guest': <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:02,975 - server - server:send_message_to_receiver:90 - User me is not registered, cannot send the message
+2022-11-13 05:01:02,977 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x000002442556B040>, {'action': 'message', 'sender': 'guest', 'receiver': 'me', 'time': 1668304862.8550158, 'message_text': 'ddjsjs'}, {'guest': <socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>}, [<socket.socket fd=660, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53257)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:06,594 - server - server:main_server:144 - Connection with ('127.0.0.1', 53257) has been lost
+2022-11-13 05:01:30,466 - server - functions:args_parser:80 - starting the log of deco
+run function check_server_flag with parameters () , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 05:01:30,469 - server - functions:args_parser:91 - starting the log of deco
+run function check_port with parameters (7777,) , {}  
+from module server.py
+from function args_parser
+
+2022-11-13 05:01:30,471 - server - server:<module>:159 - starting the log of deco
+run function args_parser with parameters () , {}  
+from module server.py
+from function <module>
+
+2022-11-13 05:01:30,473 - server - server:main_server:111 - Launching server with parameters port= 7777, address = 
+2022-11-13 05:01:30,514 - server - server:accept_client:101 - Client with address ('127.0.0.1', 53263) connected
+2022-11-13 05:01:30,514 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x000001A1A56286D0>, <socket.socket fd=388, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:30,515 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 53263)
+2022-11-13 05:01:30,721 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668304890.514588, 'sender': 'test2'}
+2022-11-13 05:01:30,722 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:30,723 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668304890.514588, 'sender': 'test2'}
+2022-11-13 05:01:30,723 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 05:01:30,724 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 05:01:30,728 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 05:01:30,728 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 05:01:30,729 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 05:01:30,731 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'presence', 'time': 1668304890.514588, 'sender': 'test2'}, [], <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>], {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:30,977 - server - server:accept_client:101 - Client with address ('127.0.0.1', 53262) connected
+2022-11-13 05:01:30,978 - server - server:main_server:120 - starting the log of deco
+run function accept_client with parameters (<__main__.Server object at 0x000001A1A56286D0>, <socket.socket fd=388, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('0.0.0.0', 7777)>) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:30,978 - server - server:main_server:124 - established connection with address: ('127.0.0.1', 53262)
+2022-11-13 05:01:30,979 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'presence', 'time': 1668304890.977692, 'sender': 'test1'}
+2022-11-13 05:01:30,980 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:30,983 - server - server:process_client_message:43 - got correct message of presence from client {'action': 'presence', 'time': 1668304890.977692, 'sender': 'test1'}
+2022-11-13 05:01:30,983 - server - server:process_client_message:46 - adding client to list of clients
+2022-11-13 05:01:30,984 - server - functions:decode_message:19 - message has been decoded {'response': 200}
+2022-11-13 05:01:30,985 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'response': 200},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 05:01:30,986 - server - functions:decode_and_send:41 - message: b'{"response": 200}' has been successfully sent
+2022-11-13 05:01:30,987 - server - server:process_client_message:48 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>, {'response': 200}) , {}  
+from module server.py
+from function process_client_message
+
+2022-11-13 05:01:30,988 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'presence', 'time': 1668304890.977692, 'sender': 'test1'}, [], <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>], {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:56,969 - server - functions:listen_and_get:31 - got message from sender @test2@ hello
+2022-11-13 05:01:56,970 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:56,971 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'}
+2022-11-13 05:01:56,972 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'}, [{'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'}], <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>], {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:01:56,973 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'}
+2022-11-13 05:01:56,974 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 05:01:56,974 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test2", "receiver": "test1", "time": 1668304916.9264686, "message_text": "hello"}' has been successfully sent
+2022-11-13 05:01:56,976 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 05:01:56,977 - server - server:send_message_to_receiver:86 - Sent message to test1 from user test2
+2022-11-13 05:01:56,978 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304916.9264686, 'message_text': 'hello'}, {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:14,296 - server - functions:listen_and_get:31 - got message from sender @test1@ how are you today
+2022-11-13 05:02:14,297 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:14,300 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'}
+2022-11-13 05:02:14,301 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'}, [{'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'}], <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>], {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:14,301 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'}
+2022-11-13 05:02:14,303 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 05:02:14,303 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test1", "receiver": "test2", "time": 1668304934.278469, "message_text": "how are you today"}' has been successfully sent
+2022-11-13 05:02:14,304 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 05:02:14,304 - server - server:send_message_to_receiver:86 - Sent message to test2 from user test1
+2022-11-13 05:02:14,305 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'message', 'sender': 'test1', 'receiver': 'test2', 'time': 1668304934.278469, 'message_text': 'how are you today'}, {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:27,806 - server - functions:listen_and_get:31 - got message from sender @test2@ fine, and yoy
+2022-11-13 05:02:27,807 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:27,808 - server - server:process_client_message:59 - got correct message from client {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'}
+2022-11-13 05:02:27,809 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'}, [{'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'}], <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>], {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:27,810 - server - functions:decode_message:19 - message has been decoded {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'}
+2022-11-13 05:02:27,811 - server - functions:decode_and_send:39 - starting the log of deco
+run function decode_message with parameters ({'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'},) , {}  
+from module server.py
+from function decode_and_send
+
+2022-11-13 05:02:27,811 - server - functions:decode_and_send:41 - message: b'{"action": "message", "sender": "test2", "receiver": "test1", "time": 1668304947.638201, "message_text": "fine, and yoy"}' has been successfully sent
+2022-11-13 05:02:27,813 - server - server:send_message_to_receiver:85 - starting the log of deco
+run function decode_and_send with parameters (<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'}) , {}  
+from module server.py
+from function send_message_to_receiver
+
+2022-11-13 05:02:27,814 - server - server:send_message_to_receiver:86 - Sent message to test1 from user test2
+2022-11-13 05:02:27,814 - server - server:main_server:150 - starting the log of deco
+run function send_message_to_receiver with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'message', 'sender': 'test2', 'receiver': 'test1', 'time': 1668304947.638201, 'message_text': 'fine, and yoy'}, {'test2': <socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, 'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}, [<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>, <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>]) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:36,829 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'exit', 'time': 1668304956.6504679, 'sender': 'test2'}
+2022-11-13 05:02:36,829 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=488, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53263)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:36,831 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'exit', 'time': 1668304956.6504679, 'sender': 'test2'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>], {'test1': <socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>}) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:44,667 - server - functions:listen_and_get:31 - got message from sender @server@ {'action': 'exit', 'time': 1668304964.660513, 'sender': 'test1'}
+2022-11-13 05:02:44,668 - server - server:main_server:140 - starting the log of deco
+run function listen_and_get with parameters (<socket.socket fd=468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 53262)>,) , {}  
+from module server.py
+from function main_server
+
+2022-11-13 05:02:44,669 - server - server:main_server:141 - starting the log of deco
+run function process_client_message with parameters (<__main__.Server object at 0x000001A1A56286D0>, {'action': 'exit', 'time': 1668304964.660513, 'sender': 'test1'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}) , {}  
+from module server.py
+from function main_server
+
