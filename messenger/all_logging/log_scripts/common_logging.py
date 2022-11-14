@@ -2,8 +2,11 @@
 the body of logger
 """
 # -*- coding: utf-8 -*-
+
+import os
+import sys
 import logging.config
-from .log_settings import logger_config
+from all_logging.log_scripts.log_settings import logger_config
 
 logging.config.dictConfig(logger_config)
 

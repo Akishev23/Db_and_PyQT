@@ -29,7 +29,7 @@ logger_config = {
             'class': 'logging.handlers.TimedRotatingFileHandler',
             'level': 'DEBUG',
             'formatter': 'file_format',
-            'filename': './all_logging/logs/server.log',
+            'filename': 'all_logging/logs/server.log',
             'interval': 1,
             'when': 'midnight',
             'encoding': 'utf-8'
@@ -38,7 +38,7 @@ logger_config = {
             'class': 'logging.FileHandler',
             'level': 'DEBUG',
             'formatter': 'file_format',
-            'filename': './all_logging/logs/client.log',
+            'filename': 'all_logging/logs/client.log',
             'encoding': 'utf-8'
         }
     },

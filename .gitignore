@@ -2,4 +2,6 @@
 */Scripts
 
 /libr/
-/.idea/
+/.idea
+*.pyc
+*.log
