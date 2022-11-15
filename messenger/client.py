@@ -221,8 +221,13 @@ class Client(metaclass=ClientVerifier):
                     continue
                 break
 
+    @staticmethod
+    def clt_start():
+        address, port, nick = args_parser()
+        client = Client(address, port, nick)
+        client.main_loop()
+
 
 if __name__ == '__main__':
-    address, port, nick = args_parser()
-    client = Client(address, port, nick)
-    client.main_loop()
+    Client.clt_start()
+
