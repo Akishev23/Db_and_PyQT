@@ -9,7 +9,7 @@ import sys
 import threading
 from library.functions import listen_and_get, decode_and_send, say_hello, args_parser
 from library.variables import MESSAGE, MESSAGE_TEXT, TIME, ACTION, SENDER, ERROR, \
-    RESPONSE, EXIT, RECEIVER
+    RESPONSE, EXIT, RECEIVER, DEFAULT_PORT
 from library.errors import ServerError
 from library.metalasses import ClientVerifier
 from library.descriptors import IpValidation, ApprovedPort
@@ -231,3 +231,8 @@ class Client(metaclass=ClientVerifier):
 if __name__ == '__main__':
     Client.clt_start()
 
+    # client = Client('', DEFAULT_PORT, 'andrew')
+    # client.main_loop()
+
+    # client = Client('', DEFAULT_PORT, 'vvs')
+    # client.main_loop()

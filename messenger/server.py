@@ -5,31 +5,33 @@ server's part of the project
 import socket
 import select
 from library.variables import ACTION, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, \
-    ERROR, MESSAGE_TEXT, MESSAGE, SENDER, RESPONSE_400, RECEIVER, EXIT, NEW_NAME
+    ERROR, MESSAGE_TEXT, MESSAGE, SENDER, RESPONSE_400, RECEIVER, EXIT, NEW_NAME, DATABASE
 from library.functions import listen_and_get, decode_and_send, args_parser
 from decor import logger, log
 from library.descriptors import ApprovedPort, IpValidation
 from library.metalasses import ServerVerifier
+from database_component import ServerArchive
 
 
 class Server(metaclass=ServerVerifier):
-
     listen_address = IpValidation()
     listen_port = ApprovedPort()
 
-    def __init__(self, listen_address, listen_port):
+    def __init__(self, listen_address, listen_port, db_string):
         self.listen_address = listen_address
         self.listen_port = listen_port
         self.clients = []
         self.messages = []
         self.names = {}
         self.socket_transport = None
+        self.db_string = db_string
+        self.database = None
 
     def socket_starting(self):  # Я так и не понял, почему нельзя применить этот метод внутри
         # экземпляра класса, поэтому пока оставил так, жду ваших пояснений
 
         """
-        makes a socket
+        creates socket
         :return:
         """
         logger.info(f'Launching server with parameters port= {self.listen_port}, address ='
@@ -60,9 +62,14 @@ class Server(metaclass=ServerVerifier):
             logger.debug(f'got correct message of presence from client {message}')
             name = message[SENDER]
             if name not in self.names:
-                logger.info('adding client to list of clients')
-                self.names[name] = client
-                decode_and_send(client, {RESPONSE: 200})
+                try:
+                    logger.info('adding client to list of clients')
+                    self.names[name] = client
+                    ipaddress, port = client.getpeername()
+                    self.database.join(name, ipaddress, port)
+                    decode_and_send(client, {RESPONSE: 200})
+                except:
+                    logger.exception('Something went wrong')
             else:
                 resp = RESPONSE_400
                 resp[ERROR] = 'Pointed name is busy'
@@ -78,7 +85,11 @@ class Server(metaclass=ServerVerifier):
 
         if all(message.get(key) for key in exit_keys) and message[ACTION] == EXIT:
             clt = self.names[message[SENDER]]
-            self.clients.remove(clt)
+            try:
+                self.database.leave(message[SENDER])
+                self.clients.remove(clt)
+            except:
+                logger.exception('Something went wrong')
             clt.close()
             del self.names[message[SENDER]]
             return
@@ -132,12 +143,52 @@ class Server(metaclass=ServerVerifier):
             logger.info(f'Client with address {address} connected')
             return client, address
 
+    def print_help(self):
+        """
+        prints all supported commands
+        :return:
+        """
+        print(f'Поддерживаемые команды:'
+              f'users or -u ------ full list of users'
+              f'online or -o ------list of online clients'
+              f'history or -h ------ history of clients joints and leaves'
+              f'quit or -q --- close help instance'
+              f'help or -h ----- info about all supported commands')
+
+    def process_help(self):
+        """
+        function processes help commands for the server instance
+        :return:
+        """
+        self.print_help()
+        while True:
+            command = input('Input a command')
+            if command in ['users', '-u']:
+                for user in self.database.all_users():
+                    print(user)
+            elif command in ['online', '-o']:
+                for user in self.database.online_users():
+                    print(user)
+            elif command in ['history', '-h']:
+                user = input('Input username or leave blank to see all users history')
+                if not user:
+                    user = None
+                for row in self.database.get_history(username=user):
+                    print(row)
+            elif command in ['quit', '-q']:
+                break
+            else:
+                print('unknown command, try again')
+                self.print_help()
+
     @log
     def main_server_algo(self):
         """
         main function of server's part
         :return:
         """
+        self.database = ServerArchive(database=self.db_string)
+        self.database.create_tables()
         self.socket_starting()
         while True:
             try:
@@ -177,6 +228,8 @@ class Server(metaclass=ServerVerifier):
                         del self.names[msg[RECEIVER]]
                 self.messages.clear()
 
+        # self.process_help() TODO: handle that function with treads
+
     @staticmethod
     def srv_start():
         """
@@ -184,9 +237,9 @@ class Server(metaclass=ServerVerifier):
         :return:
         """
         la, lp = args_parser()
-        server = Server(la, lp)
+        server = Server(la, lp, DATABASE)
         server.main_server_algo()
 
 
 if __name__ == '__main__':
-    Server.srv_start()
+   Server.srv_start()

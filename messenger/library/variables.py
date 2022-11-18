@@ -15,7 +15,7 @@ ACCOUNT_NAME = 'account_name'
 SENDER = 'sender'
 EXIT = 'exit'
 RECEIVER = 'receiver'
-
+DATABASE = 'sqlite:///server_db.db3'
 PRESENCE = 'presence'
 RESPONSE = 'response'
 ERROR = 'error'
