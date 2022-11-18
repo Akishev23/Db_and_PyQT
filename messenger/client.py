@@ -230,9 +230,3 @@ class Client(metaclass=ClientVerifier):
 
 if __name__ == '__main__':
     Client.clt_start()
-
-    # client = Client('', DEFAULT_PORT, 'andrew')
-    # client.main_loop()
-
-    # client = Client('', DEFAULT_PORT, 'vvs')
-    # client.main_loop()

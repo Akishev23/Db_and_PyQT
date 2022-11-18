@@ -55,7 +55,8 @@ class Server(metaclass=ServerVerifier):
         presence_keys = [ACTION, TIME, SENDER]
         message_keys = [ACTION, TIME, RECEIVER, SENDER, MESSAGE_TEXT]
         who_is_online = [ACTION, TIME, SENDER]
-        # change_nickname = [ACTION, TIME, SENDER, NEW_NAME] make later
+        # change_nickname = [ACTION, TIME, SENDER, NEW_NAME] TODO: change, but i'm not assured
+        #  it's necessary
         exit_keys = [ACTION, SENDER]
 
         if all(message.get(key) for key in presence_keys) and message[ACTION] == PRESENCE:
@@ -97,7 +98,7 @@ class Server(metaclass=ServerVerifier):
         if all(message.get(key) for key in who_is_online) and message[ACTION] == 'WHO_ONLINE':
             logger.info('Got message to see who is online')
             message[RECEIVER] = message[SENDER]
-            clients = list(self.names.keys())
+            clients = [client[1] for client in self.database.online_users()]
             clients.remove(message[SENDER])
             online = '\n'.join(clients)
             message[SENDER] = 'Server'
