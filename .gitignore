@@ -6,3 +6,5 @@
 *.pyc
 *.log
 *.db3
+*.sqlite
+for_testing_needs_only
