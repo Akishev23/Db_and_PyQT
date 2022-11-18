@@ -50,7 +50,8 @@ class ServerArchive:
 
     def __init__(self, database: str):
         self.database = database
-        self.engine = create_engine(self.database, echo=False, pool_recycle=7200)
+        self.engine = create_engine(self.database, echo=False, pool_recycle=7200,
+                                    connect_args={"check_same_thread": False})
         self.metadata = MetaData()
         self.session = None
 

@@ -4,6 +4,7 @@ server's part of the project
 
 import socket
 import select
+from threading import Thread
 from library.variables import ACTION, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, \
     ERROR, MESSAGE_TEXT, MESSAGE, SENDER, RESPONSE_400, RECEIVER, EXIT, NEW_NAME, DATABASE
 from library.functions import listen_and_get, decode_and_send, args_parser
@@ -11,6 +12,7 @@ from decor import logger, log
 from library.descriptors import ApprovedPort, IpValidation
 from library.metalasses import ServerVerifier
 from database_component import ServerArchive
+import time
 
 
 class Server(metaclass=ServerVerifier):
@@ -149,12 +151,12 @@ class Server(metaclass=ServerVerifier):
         prints all supported commands
         :return:
         """
-        print(f'Поддерживаемые команды:'
-              f'users or -u ------ full list of users'
-              f'online or -o ------list of online clients'
-              f'history or -h ------ history of clients joints and leaves'
-              f'quit or -q --- close help instance'
-              f'help or -h ----- info about all supported commands')
+        print(f'Available commands: \n'
+              f'users or -u ------ full list of users \n'
+              f'online or -o ------list of online clients \n'
+              f'history or -h ------ history of clients joints and leaves \n'
+              f'quit or -q --- close help instance \n'
+              f'help or -h ----- info about all supported commands \n')
 
     def process_help(self):
         """
@@ -163,7 +165,7 @@ class Server(metaclass=ServerVerifier):
         """
         self.print_help()
         while True:
-            command = input('Input a command')
+            command = input('Input a command: \n')
             if command in ['users', '-u']:
                 for user in self.database.all_users():
                     print(user)
@@ -171,7 +173,7 @@ class Server(metaclass=ServerVerifier):
                 for user in self.database.online_users():
                     print(user)
             elif command in ['history', '-h']:
-                user = input('Input username or leave blank to see all users history')
+                user = input('Input username or leave blank to see all users history: \n')
                 if not user:
                     user = None
                 for row in self.database.get_history(username=user):
@@ -182,15 +184,11 @@ class Server(metaclass=ServerVerifier):
                 print('unknown command, try again')
                 self.print_help()
 
-    @log
-    def main_server_algo(self):
+    def handle_messages(self):
         """
-        main function of server's part
+        function which handles clients and messages
         :return:
         """
-        self.database = ServerArchive(database=self.db_string)
-        self.database.create_tables()
-        self.socket_starting()
         while True:
             try:
                 client, client_address = self.accept_client(self.socket_transport)
@@ -229,6 +227,26 @@ class Server(metaclass=ServerVerifier):
                         del self.names[msg[RECEIVER]]
                 self.messages.clear()
 
+    @log
+    def main_server_algo(self):
+        """
+        main function of server's part
+        :return:
+        """
+        self.database = ServerArchive(database=self.db_string)
+        self.database.create_tables()
+        self.socket_starting()
+        main = Thread(target=self.handle_messages, args=(), daemon=True)
+        main.start()
+        server_helper = Thread(target=self.process_help, args=(), daemon=True)
+        server_helper.start()
+
+        while True:
+            time.sleep(0.5)
+            if main.is_alive():  # and user_int.is_alive():
+                continue
+            break
+
         # self.process_help() TODO: handle that function with treads
 
     @staticmethod
@@ -243,4 +261,4 @@ class Server(metaclass=ServerVerifier):
 
 
 if __name__ == '__main__':
-   Server.srv_start()
+    Server.srv_start()

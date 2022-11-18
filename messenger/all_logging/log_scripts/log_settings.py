@@ -4,8 +4,8 @@ config of common logger
 # -*- coding: utf-8 -*-
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))
 
 logger_config = {
     'version': 1,
@@ -45,7 +45,7 @@ logger_config = {
     'loggers': {
         'server': {
             'level': 'DEBUG',
-            'handlers': ['console_handler', 'file_server']
+            'handlers': ['file_server']
         },
         'client': {
             'level': 'DEBUG',
