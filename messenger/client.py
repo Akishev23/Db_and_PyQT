@@ -9,11 +9,16 @@ import sys
 import threading
 from library.functions import listen_and_get, decode_and_send, say_hello, args_parser
 from library.variables import MESSAGE, MESSAGE_TEXT, TIME, ACTION, SENDER, ERROR, \
-    RESPONSE, EXIT, RECEIVER, DEFAULT_PORT
+    RESPONSE, EXIT, RECEIVER, DEFAULT_PORT, ADDING_CONTACT, ACCOUNT_NAME, GET_CONTACTS, \
+    REMOVE_CONTACT, USERS_REQUEST
 from library.errors import ServerError
 from library.metalasses import ClientVerifier
 from library.descriptors import IpValidation, ApprovedPort
 from decor import logger, log
+from client_db import ClientDatabase
+
+sock_lock = threading.Lock()
+database_lock = threading.Lock()
 
 
 class Client(metaclass=ClientVerifier):
@@ -25,6 +30,7 @@ class Client(metaclass=ClientVerifier):
         self.port = current_port
         self.name = nickname
         self.socket_transport = None
+        self.database = ClientDatabase(nickname)
 
     def establish_connection(self):
         """
@@ -69,6 +75,10 @@ class Client(metaclass=ClientVerifier):
         """
         receiver = input('Input to whom message is addressed \n')
         message = input('input message \n')
+
+        if not self.database.check_user(receiver):
+            logger.error('An attempt to send a message to unknown user')
+            return
         ms_ready = {
             ACTION: MESSAGE,
             SENDER: self.name,
@@ -77,6 +87,9 @@ class Client(metaclass=ClientVerifier):
             MESSAGE_TEXT: message
         }
         logger.info('message processed')
+
+        with database_lock:
+            self.database.save_message(self.name, receiver, message)
         try:
             decode_and_send(self.socket_transport, ms_ready)
             logger.info(f'message for {receiver} from {self.name} has been successfully sent')
@@ -124,6 +137,7 @@ class Client(metaclass=ClientVerifier):
         while True:
             try:
                 msg = listen_and_get(self.socket_transport)
+
                 check_dict = [ACTION, SENDER, RECEIVER, MESSAGE_TEXT]
                 if all(msg.get(key) for key in check_dict) and msg[ACTION] == 'message' and \
                         msg[RECEIVER] == self.name:
@@ -131,6 +145,7 @@ class Client(metaclass=ClientVerifier):
                           f'\n {msg[MESSAGE_TEXT]}')
                 else:
                     logger.error(f'Wrong format of message from server: {msg}')
+
             except Exception:
                 logger.exception('exception, see further')
 
@@ -146,6 +161,9 @@ class Client(metaclass=ClientVerifier):
         print('exit or ex - exit')
         # print('name - change your nickname') make later
         print('whoisonline or who - who is online')
+        print('contacts or c - who is online')
+        print('edit or e - edit your contact list')
+        print('history or his - message history')
 
     @log
     def user_helper(self):
@@ -169,8 +187,117 @@ class Client(metaclass=ClientVerifier):
             elif command in ('whoisonline', 'who'):
                 logger.info('processed who is online')
                 self.create_who_is_online_message()
+            elif command in ('contacts', 'c'):
+                with database_lock:
+                    contacts = self.database.get_contacts()
+                for contact in contacts:
+                    print(contact)
+            elif command in ('edit', 'e'):
+                self.edit_contacts()
+
+            elif command in ('history', 'his'):
+                self.print_history()
+
             else:
                 print('Could not recognize command')
+
+    def print_history(self):
+        direction = input('Incoming = in, Outgoing = out, all = press Enter')
+        with database_lock:
+            if direction == 'in':
+                history = self.database.get_history(receiver=self.name)
+                for message in history:
+                    print(f'\n from {message[0]} at {message[3]} : \n {message[2]}')
+            elif direction == 'out':
+                history = self.database.get_history(sender=self.name)
+                for message in history:
+                    print(f'\n to {message[1]} at {message[3]}: \n {message[2]}')
+            else:
+                history = self.database.get_history()
+                for message in history:
+                    print(f'\n from {message[0]} to {message[1]} at {message[3]}: \n {message[2]}')
+
+    def add_contact_on_server(self, adding_contact):
+        logger.debug(f'Create contact {adding_contact}')
+        message = {
+            ACTION: ADDING_CONTACT,
+            TIME: time.time(),
+            SENDER: self.name,
+            ACCOUNT_NAME: adding_contact
+        }
+        decode_and_send(self.socket_transport, message)
+
+    def edit_contacts(self):
+        direction = input('to delete input del and add to add contact')
+        if direction == 'del':
+            deleting_contact = input('input nickname of contact youd like to delete ')
+            with database_lock:
+                if self.database.check_user(deleting_contact):
+                    self.database.del_contact(deleting_contact)
+                else:
+                    logger.error('Attempted to delete unknown contact')
+        elif direction == 'add':
+            adding_contact = input('input nickname of contact youd like to add')
+            if self.database.check_user(adding_contact):
+                with database_lock:
+                    self.database.add_contact(adding_contact)
+                with sock_lock:
+                    try:
+                        self.add_contact_on_server(adding_contact)
+                    except ServerError:
+                        logger.error('Unable to send info to the server')
+
+    def contacts_list_request(self):
+        logger.debug(f'Asked contact list for {self.name}')
+        message = {
+            ACTION: GET_CONTACTS,
+            TIME: time.time(),
+            SENDER: self.name
+        }
+        decode_and_send(self.socket_transport, message)
+        answer = listen_and_get(self.socket_transport)
+        logger.debug('Received server answer')
+        if RESPONSE in answer and answer[RESPONSE] == 202:
+            return answer[MESSAGE_TEXT]
+        raise ServerError
+
+    def user_list_request(self):
+        logger.debug(f'Asked for all known user list for {self.name}')
+        message = {
+            ACTION: USERS_REQUEST,
+            TIME: time.time(),
+            SENDER: self.name
+        }
+        decode_and_send(self.socket_transport, message)
+        answer = listen_and_get(self.socket_transport)
+        if RESPONSE in answer and answer[RESPONSE] == 202:
+            return answer[MESSAGE_TEXT]
+        raise ServerError
+
+    def remove_contact_on_server(self, contact):
+        logger.debug(f'Removing contact {contact}')
+        message = {
+            ACTION: REMOVE_CONTACT,
+            TIME: time.time(),
+            SENDER: self.name,
+            ACCOUNT_NAME: contact
+        }
+        decode_and_send(self.socket_transport, message)
+
+    def filling_db(self):
+        try:
+            users = self.user_list_request()
+        except ServerError:
+            logger.error('Unable get info from the server')
+        else:
+            self.database.add_users(users)
+        try:
+            contacts = self.contacts_list_request()
+        except ServerError:
+            logger.error('Unable get info from the server')
+        else:
+            for contact in contacts:
+                self.database.add_contact(contact)
 
     @log
     def main_loop(self):
@@ -204,6 +331,7 @@ class Client(metaclass=ClientVerifier):
         else:
             print('Messager')
             print(f'Your start nickname is: {self.name}')
+            self.filling_db()
 
             rec = threading.Thread(target=self.getting_message_from_server,
                                    args=(),

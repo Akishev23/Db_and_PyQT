@@ -7,7 +7,10 @@ DEFAULT_IP_ADDRESS = '127.0.0.1'
 MAX_CONNECTIONS = 5
 MAX_PACKAGE_LENGTH = 1024
 ENCODING = 'utf-8'
-
+ADDING_CONTACT = 'add_contact'
+GET_CONTACTS = 'get_contacts'
+REMOVE_CONTACT = 'remove_contact'
+USERS_REQUEST = 'users_request'
 ACTION = 'action'
 TIME = 'time'
 USER = 'user'
@@ -27,3 +30,6 @@ RESPONSE_400 = {
     RESPONSE: 400,
     ERROR: None
 }
+RESPONSE_202 = {RESPONSE: 202,
+                MESSAGE_TEXT: None
+                }

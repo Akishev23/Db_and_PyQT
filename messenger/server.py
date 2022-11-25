@@ -5,14 +5,19 @@ server's part of the project
 import socket
 import select
 from threading import Thread
+import threading
 from library.variables import ACTION, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, \
-    ERROR, MESSAGE_TEXT, MESSAGE, SENDER, RESPONSE_400, RECEIVER, EXIT, NEW_NAME, DATABASE
+    ERROR, MESSAGE_TEXT, MESSAGE, SENDER, RESPONSE_400, RECEIVER, EXIT, NEW_NAME, DATABASE, \
+    GET_CONTACTS, RESPONSE_202, REMOVE_CONTACT, ADDING_CONTACT, USERS_REQUEST
 from library.functions import listen_and_get, decode_and_send, args_parser
 from decor import logger, log
 from library.descriptors import ApprovedPort, IpValidation
 from library.metalasses import ServerVerifier
-from database_component import ServerArchive
+from server_db import ServerArchive
 import time
+
+NEW_CONNECTION = False
+flag_lock = threading.Lock()
 
 
 class Server(metaclass=ServerVerifier):
@@ -53,12 +58,10 @@ class Server(metaclass=ServerVerifier):
         :param message: dictionary
         :return:
         """
-
+        global NEW_CONNECTION
         presence_keys = [ACTION, TIME, SENDER]
         message_keys = [ACTION, TIME, RECEIVER, SENDER, MESSAGE_TEXT]
         who_is_online = [ACTION, TIME, SENDER]
-        # change_nickname = [ACTION, TIME, SENDER, NEW_NAME] TODO: change, but i'm not assured
-        #  it's necessary
         exit_keys = [ACTION, SENDER]
 
         if all(message.get(key) for key in presence_keys) and message[ACTION] == PRESENCE:
@@ -71,6 +74,8 @@ class Server(metaclass=ServerVerifier):
                     ipaddress, port = client.getpeername()
                     self.database.join(name, ipaddress, port)
                     decode_and_send(client, {RESPONSE: 200})
+                    with flag_lock:
+                        NEW_CONNECTION = True
                 except:
                     logger.exception('Something went wrong')
             else:
@@ -83,6 +88,7 @@ class Server(metaclass=ServerVerifier):
 
         if all(message.get(key) for key in message_keys) and message[ACTION] == MESSAGE:
             self.messages.append(message)
+            self.database.process_client_message(message[SENDER], message[RECEIVER])
             logger.debug(f'got correct message from client {message}')
             return
 
@@ -95,6 +101,8 @@ class Server(metaclass=ServerVerifier):
                 logger.exception('Something went wrong')
             clt.close()
             del self.names[message[SENDER]]
+            with flag_lock:
+                NEW_CONNECTION = True
             return
 
         if all(message.get(key) for key in who_is_online) and message[ACTION] == 'WHO_ONLINE':
@@ -108,6 +116,32 @@ class Server(metaclass=ServerVerifier):
             now_online = 'Now online are: \n' + online
             message[MESSAGE_TEXT] = now_online
             self.messages.append(message)
+            return
+
+        if ACTION in message and message[ACTION] == GET_CONTACTS:
+            resp = RESPONSE_202
+            resp[MESSAGE_TEXT] = self.database.get_contacts(message[SENDER])
+            decode_and_send(client, resp)
+            return
+        if ACTION in message and message[ACTION] == REMOVE_CONTACT:
+            resp = RESPONSE_202
+            self.database.remove_contact(message[SENDER], message[RECEIVER])
+            resp[
+                MESSAGE_TEXT] = f'Contact {message[RECEIVER]} is successfully removed from your list of' \
+                                f'contacts '
+            decode_and_send(client, resp)
+            return
+        if ACTION in message and message[ACTION] == ADDING_CONTACT:
+            resp = RESPONSE_202
+            self.database.add_contact(message[SENDER], message[RECEIVER])
+            resp[
+                MESSAGE_TEXT] = f'Contact {message[RECEIVER]} is successfully added to your list of contacts'
+            decode_and_send(client, resp)
+            return
+        if ACTION in message and message[ACTION] == USERS_REQUEST:
+            resp = RESPONSE_202
+            resp[MESSAGE_TEXT] = [user[0] for user in self.database.all_users()]
+            decode_and_send(client, resp)
             return
 
         resp = RESPONSE_400
@@ -213,8 +247,14 @@ class Server(metaclass=ServerVerifier):
                     try:
                         msg = listen_and_get(clt)
                         self.process_client_message(msg, clt)
-                    except Exception:
+                    except Exception as e:
+                        logger.exception('Unable to process, see underlying')
                         logger.info(f'Connection with {clt.getpeername()} has been lost')
+                        for name in self.names:
+                            if self.names[name] == clt:
+                                self.database.leave(name)
+                                del self.names[name]
+                                break
                         self.clients.remove(clt)
 
             if self.messages:
@@ -224,7 +264,9 @@ class Server(metaclass=ServerVerifier):
                     except Exception:
                         logger.info(f'Unable to send message to {msg[RECEIVER]}')
                         self.clients.remove(self.names[msg[RECEIVER]])
+                        self.database.user_logout(msg[RECEIVER])
                         del self.names[msg[RECEIVER]]
+
                 self.messages.clear()
 
     @log
@@ -246,8 +288,6 @@ class Server(metaclass=ServerVerifier):
             if main.is_alive():  # and user_int.is_alive():
                 continue
             break
-
-        # self.process_help() TODO: handle that function with treads
 
     @staticmethod
     def srv_start():

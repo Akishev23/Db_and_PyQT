@@ -14,11 +14,9 @@ from .variables import MAX_PACKAGE_LENGTH, ENCODING, ACTION, PRESENCE, TIME, \
     DEFAULT_IP_ADDRESS, DEFAULT_PORT, SENDER, MESSAGE_TEXT
 
 
-
 def decode_message(message: dict):
     logger.info(f'message has been decoded {message}')
     return json.dumps(message).encode(ENCODING)
-
 
 
 def listen_and_get(client: socket.socket):
@@ -34,12 +32,10 @@ def listen_and_get(client: socket.socket):
                 return incoming_message
 
 
-
 def decode_and_send(this_socket: socket.socket, message: dict):
     outgoing_message = decode_message(message)
     this_socket.send(outgoing_message)
     logger.info('message: %s has been successfully sent', outgoing_message)
-
 
 
 def say_hello(account_name):
@@ -52,7 +48,6 @@ def say_hello(account_name):
     return resp
 
 
-
 def check_port(num: int):
     available_ports = p.open(1024, 65535)
     if num not in available_ports:
@@ -60,12 +55,12 @@ def check_port(num: int):
     return 1
 
 
-
 def check_server_flag():
     launcher_name = os.path.basename(sys.argv[0]).split('.')[0]
     if launcher_name == 'server':
         return True
     return False
+
 
 def args_parser():
     """
