@@ -63,6 +63,8 @@ class ServerArchive:
 
     def __init__(self, database: str):
         self.database = database
+        if 'sqlite:///' not in self.database:
+            self.database = 'sqlite:///' + self.database
         self.engine = create_engine(self.database, echo=False, pool_recycle=7200,
                                     connect_args={"check_same_thread": False})
         self.metadata = MetaData()
