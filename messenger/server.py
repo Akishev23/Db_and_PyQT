@@ -1,11 +1,14 @@
 """
 server's part of the project
 """
-
+import configparser
 import socket
 import select
+import sys
+import os
 from threading import Thread
 import threading
+import argparse
 from library.variables import ACTION, RESPONSE, MAX_CONNECTIONS, PRESENCE, TIME, \
     ERROR, MESSAGE_TEXT, MESSAGE, SENDER, RESPONSE_400, RECEIVER, EXIT, NEW_NAME, DATABASE, \
     GET_CONTACTS, RESPONSE_202, REMOVE_CONTACT, ADDING_CONTACT, USERS_REQUEST
@@ -15,9 +18,14 @@ from library.descriptors import ApprovedPort, IpValidation
 from library.metalasses import ServerVerifier
 from server_db import ServerArchive
 import time
+from PyQt5.QtWidgets import QApplication, QMessageBox
+from PyQt5.QtCore import QTimer
+from server_gui import MainWindow, gui_create_model, HistoryWindow, create_stat_model, ConfigWindow
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
 
 NEW_CONNECTION = False
 flag_lock = threading.Lock()
+GIU_CONNECTION = False
 
 
 class Server(metaclass=ServerVerifier):
@@ -33,6 +41,15 @@ class Server(metaclass=ServerVerifier):
         self.socket_transport = None
         self.db_string = db_string
         self.database = None
+        self.config = None
+
+    def arg_parser(self, default_port, default_address):
+        parser = argparse.ArgumentParser()
+        parser.add_argument('-p', default=default_port, type=int, nargs='?')
+        parser.add_argument('-a', default=default_address, nargs='?')
+        namespace = parser.parse_args(sys.argv[1:])
+        self.listen_address = namespace.a
+        self.listen_port = namespace.p
 
     def socket_starting(self):  # Я так и не понял, почему нельзя применить этот метод внутри
         # экземпляра класса, поэтому пока оставил так, жду ваших пояснений
@@ -275,7 +292,14 @@ class Server(metaclass=ServerVerifier):
         main function of server's part
         :return:
         """
-        self.database = ServerArchive(database=self.db_string)
+        self.config = configparser.ConfigParser()
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        self.config.read(f"{dir_path}/{'server.ini'}")
+        self.arg_parser(
+            self.config['SETTINGS']['Default_port'], self.config['SETTINGS']['Listen_Address'])
+        self.database = ServerArchive(database=os.path.join(
+                self.config['SETTINGS']['Database_path'],
+                self.config['SETTINGS']['Database_file']))
         self.database.create_tables()
         self.socket_starting()
         main = Thread(target=self.handle_messages, args=(), daemon=True)
@@ -288,6 +312,74 @@ class Server(metaclass=ServerVerifier):
             if main.is_alive():  # and user_int.is_alive():
                 continue
             break
+
+    def gui_part(self):
+
+        server_app = QApplication(sys.argv)
+        main_window = MainWindow()
+
+        main_window.statusBar().showMessage('Server Working')
+        main_window.active_clients_table.setModel(gui_create_model(self.database))
+        main_window.active_clients_table.resizeColumnsToContents()
+        main_window.active_clients_table.resizeRowsToContents()
+
+        def list_update():
+            global GIU_CONNECTION
+            if GIU_CONNECTION:
+                main_window.active_clients_table.setModel(
+                    gui_create_model(self.database))
+                main_window.active_clients_table.resizeColumnsToContents()
+                main_window.active_clients_table.resizeRowsToContents()
+                with flag_lock:
+                    GIU_CONNECTION = False
+
+        def show_statistics():
+            stat_window = HistoryWindow()
+            stat_window.history_table.setModel(create_stat_model(self.database))
+            stat_window.history_table.resizeColumnsToContents()
+            stat_window.history_table.resizeRowsToContents()
+            stat_window.show()
+
+        def server_config():
+            global config_window
+            config_window = ConfigWindow()
+            config_window.db_path.insert(config['SETTINGS']['Database_path'])
+            config_window.db_file.insert(config['SETTINGS']['Database_file'])
+            config_window.port.insert(config['SETTINGS']['Default_port'])
+            config_window.ip.insert(config['SETTINGS']['Listen_Address'])
+            config_window.save_btn.clicked.connect(save_server_config)
+
+        def save_server_config():
+            global config_window
+            message = QMessageBox()
+            config['SETTINGS']['Database_path'] = config_window.db_path.text()
+            config['SETTINGS']['Database_file'] = config_window.db_file.text()
+            try:
+                port = int(config_window.port.text())
+            except ValueError:
+                message.warning(config_window, 'Ошибка', 'Порт должен быть числом')
+            else:
+                config['SETTINGS']['Listen_Address'] = config_window.ip.text()
+                if 1023 < port < 65536:
+                    config['SETTINGS']['Default_port'] = str(port)
+                    print(port)
+                    with open('server.ini', 'w') as conf:
+                        config.write(conf)
+                        message.information(
+                            config_window, 'OK', 'Настройки успешно сохранены!')
+                else:
+                    message.warning(
+                        config_window,
+                        'Ошибка',
+                        'Порт должен быть от 1024 до 65536')
+
+        timer = QTimer()
+        timer.timeout.connect(list_update)
+        timer.start(1000)
+        main_window.refresh_button.triggered.connect(list_update)
+        main_window.show_history_button.triggered.connect(show_statistics)
+        main_window.config_btn.triggered.connect(server_config)
+        server_app.exec_()
 
     @staticmethod
     def srv_start():
